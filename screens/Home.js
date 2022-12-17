@@ -242,7 +242,7 @@ const Home = ({ navigation }) => {
                                     height: 30
                                 }}
                             />
-                            <Text style={{ marginLeft: SIZES.base, ...FONTS.body3, color: COLORS.white }}>My Card</Text>
+                            <Text style={{ marginLeft: SIZES.base, ...FONTS.body3, color: COLORS.white }}>My NFT</Text>
                         </View>
                     </TouchableOpacity>
                 </View>
