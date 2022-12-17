@@ -1,6 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import OnboardingScreen from "../tgoky-book/screens/OnBoarding";
 
 import { BookDetail } from "./screens/";
 import Tabs from "./navigation/tabs";
@@ -35,11 +36,14 @@ const App = () => {
                     headerShown: false
                     
                 }}
-                initialRouteName={'Home'}
+                initialRouteName={'OnBoarding'}
                 
             >
                 {/* Tabs */}
                 <Stack.Screen name="Home" component={Tabs}  
+                    />
+
+<Stack.Screen name="OnBoarding" component={OnboardingScreen}  
                     />
 
                 {/* Screens */}

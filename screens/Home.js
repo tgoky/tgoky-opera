@@ -306,7 +306,7 @@ const Home = ({ navigation }) => {
             <View style={{ flex: 1 }}>
                 {/* Header */}
                 <View style={{ paddingHorizontal: SIZES.padding, flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Text style={{ ...FONTS.h2, color: COLORS.white }}>My Book</Text>
+                    <Text style={{ ...FONTS.h2, color: COLORS.white }}>Canary Store</Text>
 
                     <TouchableOpacity
                         onPress={() => console.log("See More")}
@@ -486,16 +486,22 @@ const Home = ({ navigation }) => {
             <ScrollView style={{ marginTop: SIZES.radius }}>
                 {/* Books Section */}
                 <View>
+               
                     {renderMyBookSection(myBooks)}
+                   
                 </View>
 
                 {/* Categories Section */}
                 <View style={{ marginTop: SIZES.padding }}>
                     <View>
+                        
                         {renderCategoryHeader()}
+                     
                     </View>
                     <View>
+                        
                         {renderCategoryData()}
+                       
                     </View>
                 </View>
             </ScrollView>
