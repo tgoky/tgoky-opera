@@ -131,6 +131,15 @@ const Tabs = () => {
             <Tab.Screen
                 name="Setting"
                 component={Home}
+                options={{
+                    headerStyle: {
+                      backgroundColor: "#25282F",
+                    },
+                    headerTintColor: 'black',
+                    headerTitleStyle: {
+                      fontWeight: 'bold',
+                    },
+                  }}
             />
         </Tab.Navigator>
     )
