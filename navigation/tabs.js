@@ -9,18 +9,26 @@ import { icons, COLORS } from "../constants";
 const Tab = createBottomTabNavigator();
 
 const tabOptions = {
-    showLabel: false,
-    style: {
+    tabBarShowLabel: false,
+    tabBarStyle: {
         height: "10%",
-        backgroundColor: COLORS.black
-    }
+        backgroundColor: COLORS.black,
+    },
+
 }
 
 const Tabs = () => {
     return (
         <Tab.Navigator
-            tabBarOptions={tabOptions}
+            // tabBarOptions={tabOptions}
             screenOptions={({ route }) => ({
+                tabBarShowLabel: false,
+            tabBarStyle: [{
+                    "display": "flex",
+                    height: "10%",
+                    backgroundColor: COLORS.black,
+            },
+        null ],
                 tabBarIcon: ({ focused }) => {
                     const tintColor = focused ? COLORS.white : COLORS.gray;
 
