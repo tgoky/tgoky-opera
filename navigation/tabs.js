@@ -89,9 +89,8 @@ const Tabs = () => {
             })}
         >
             <Tab.Screen
-                name="Home"
+                name="Canary"
                 component={Home}
-
                 options={{
                     headerStyle: {
                       backgroundColor: "#25282F",
@@ -106,6 +105,15 @@ const Tabs = () => {
             <Tab.Screen
                 name="Search"
                 component={Home}
+                options={{
+                    headerStyle: {
+                      backgroundColor: "#25282F",
+                    },
+                    headerTintColor: 'black',
+                    headerTitleStyle: {
+                      fontWeight: 'bold',
+                    },
+                  }}
             />
             <Tab.Screen
                 name="Notification"
