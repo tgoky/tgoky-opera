@@ -27,15 +27,20 @@ const App = () => {
         return null;
     }
     return (
-        <NavigationContainer theme={theme}>
+        <NavigationContainer theme={theme}
+        
+        >
             <Stack.Navigator
                 screenOptions={{
                     headerShown: false
+                    
                 }}
                 initialRouteName={'Home'}
+                
             >
                 {/* Tabs */}
-                <Stack.Screen name="Home" component={Tabs} />
+                <Stack.Screen name="Home" component={Tabs}  
+                    />
 
                 {/* Screens */}
                 <Stack.Screen name="BookDetail" component={BookDetail} options={{ headerShown: false }} />
