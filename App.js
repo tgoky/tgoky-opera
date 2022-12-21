@@ -2,6 +2,7 @@ import React from 'react';
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import OnboardingScreen from "../tgoky-book/screens/OnBoarding";
+import Pidy from "../tgoky-book/screens/SeveralPdf"
 
 import { BookDetail } from "./screens/";
 import Tabs from "./navigation/tabs";
@@ -44,6 +45,8 @@ const App = () => {
                     />
 
 <Stack.Screen name="OnBoarding" component={OnboardingScreen}  
+                    />
+                    <Stack.Screen name="SeveralPdf" component={Pidy}  
                     />
 
                 {/* Screens */}
