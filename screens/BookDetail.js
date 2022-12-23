@@ -205,6 +205,8 @@ const BookDetail = ({ route, navigation }) => {
     }
 
     function renderBottomButton() {
+
+      
         return (
             <View style={{ flex: 1, flexDirection: 'row' }}>
                 {/* Bookmark */}
@@ -242,6 +244,7 @@ const BookDetail = ({ route, navigation }) => {
                         alignItems: 'center',
                         justifyContent: 'center'
                     }}
+                    
                     onPress={() => navigation.navigate("SeveralPdf")}
                 >
                     <Text style={{ ...FONTS.h3, color: COLORS.white }}>Start Reading</Text>

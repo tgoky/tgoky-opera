@@ -3,7 +3,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import OnboardingScreen from "../tgoky-book/screens/OnBoarding";
 import Pidy from "../tgoky-book/screens/SeveralPdf"
-
+import OnScreen from "./screens/OnScreener";
+ 
 import { BookDetail } from "./screens/";
 import Tabs from "./navigation/tabs";
 import { useFonts } from 'expo-font';
@@ -37,7 +38,7 @@ const App = () => {
                     headerShown: false
                     
                 }}
-                initialRouteName={'OnBoarding'}
+                initialRouteName={'OnScreener'}
                 
             >
                 {/* Tabs */}
@@ -48,6 +49,8 @@ const App = () => {
                     />
                     <Stack.Screen name="SeveralPdf" component={Pidy}  
                     />
+
+                    <Stack.Screen name="OnScreener" component={OnScreen} />
 
                 {/* Screens */}
                 <Stack.Screen name="BookDetail" component={BookDetail} options={{ headerShown: false }} />

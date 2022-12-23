@@ -3,6 +3,9 @@ import { View, text} from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import { StyleSheet, Dimensions } from 'react-native';
 import Pdf from 'react-native-pdf';
+// import BookDetail from './BookDetail';
+// import { bookTheMetropolis, book} from './Home';
+// import { bookmark_icon } from '../constants/icons';
 
 const Pidy = () => {
     useEffect(
@@ -10,6 +13,7 @@ const Pidy = () => {
             SplashScreen.hide();
         }, []
     )
+
 
     const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf', cache: true };
 
