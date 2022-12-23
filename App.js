@@ -47,10 +47,13 @@ const App = () => {
 
 <Stack.Screen name="OnBoarding" component={OnboardingScreen}  
                     />
-                    <Stack.Screen name="SeveralPdf" component={Pidy}  
+                    <Stack.Screen name="SeveralPdf" component={Pidy} 
+                    
                     />
 
-                    <Stack.Screen name="OnScreener" component={OnScreen} />
+                    <Stack.Screen name="OnScreener" component={OnScreen}
+                
+                    />
 
                 {/* Screens */}
                 <Stack.Screen name="BookDetail" component={BookDetail} options={{ headerShown: false }} />

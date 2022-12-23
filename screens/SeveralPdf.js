@@ -7,6 +7,8 @@ import Pdf from 'react-native-pdf';
 // import { bookTheMetropolis, book} from './Home';
 // import { bookmark_icon } from '../constants/icons';
 
+
+
 const Pidy = () => {
     useEffect(
         () => {

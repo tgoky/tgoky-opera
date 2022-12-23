@@ -8,11 +8,11 @@ import COLORS from '../constants/onboardingColor';
 const OnScreen = ({navigation}) => {
     return (
        
-        <SafeAreaView style={{flex: 1, backgroundColor: COLORS.white}}>
+        <View style={{flex: 1, backgroundColor: "black"}}>
            <StatusBar translucent backgroundColor={COLORS.red}/>
 
             <Image
-            source={require('../assets/images/canarylogo.png')}
+            source={require('../assets/images/canarydriven.png')}
             style={style.image}
             />
             <View style={style.indicatorContainer}>
@@ -25,12 +25,12 @@ const OnScreen = ({navigation}) => {
         {/* <View>
                 <BackgroundImg />
                 </View> */}
-                 <Text style={style.title}>Canary </Text>
+                 <Text style={style.title}>Canary</Text>
                  <Text style={style.title}>Web3 Learn</Text>
              </View>
              <View style={{marginTop: 10}}>
-                 <Text style={style.textStyle}>Explore, think & grow</Text>
-                 <Text style={style.textStyle}>Canaries you can build on</Text>
+                 <Text style={style.textStyle}>Explore, Think & Grow</Text>
+                 <Text style={style.textStyle}>Canaries you can build on...</Text>
              </View>
              <View style={{flex:1,justifyContent: "flex-end",paddingBottom: 40}}>
              <View>
@@ -39,7 +39,8 @@ const OnScreen = ({navigation}) => {
      left: 17,
      top: 34,
      width: 360,
-     borderRadius: 30,}}>
+     borderRadius: 30,
+     top: 6}}>
                <Pressable onPress={() => navigation.navigate("OnBoarding")}>
                <View style={style.btn}>
                      <Text style={{color: COLORS.dark, fontSize: 18, fontWeight: "bold",}}>Welcome to Canary App</Text>
@@ -48,7 +49,7 @@ const OnScreen = ({navigation}) => {
                </TouchableOpacity>
                </View>
              </View>
-         </SafeAreaView>
+         </View>
     );
 };
 
@@ -72,17 +73,18 @@ const style = StyleSheet.create({
         borderRadius: 5,
     },
     indicatorActive: {
-        backgroundColor: COLORS.dark,
+        backgroundColor: "white",
     },
     title: {
         fontSize:38,
+        color: "gray",
         fontWeight: "bold",
         alignSelf: "center",
         fontFamily: "Futura",
     },
     textStyle: {
         fontSize: 13,
-        color: COLORS.grey,
+        color: "gray",
         alignItems: "center",
         alignSelf: "center",
     },
