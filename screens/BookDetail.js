@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 import { FONTS, COLORS, SIZES, icons } from "../constants";
 
-import SeveralPdf from '../screens/SeveralPdf';
 
 const LineDivider = () => {
     return (

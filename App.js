@@ -4,10 +4,15 @@ import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import OnboardingScreen from "../tgoky-book/screens/OnBoarding";
 import Pidy from "../tgoky-book/screens/SeveralPdf"
 import OnScreen from "./screens/OnScreener";
+import PdfScreen from './screens/PdfScreener';
  
 import { BookDetail } from "./screens/";
 import Tabs from "./navigation/tabs";
 import { useFonts } from 'expo-font';
+import FirstPdfScreen from './pdfScreens/firstPdf';
+import SecondPdfScreen from './pdfScreens/secondPdf';
+import ThirdPdfScreen from './pdfScreens/thirdPdf';
+
 
 const theme = {
     ...DefaultTheme,
@@ -54,6 +59,21 @@ const App = () => {
                     <Stack.Screen name="OnScreener" component={OnScreen}
                 
                     />
+
+<Stack.Screen name="PdfScreener" component={PdfScreen}
+                
+                />
+                <Stack.Screen name="firstPdf" component={FirstPdfScreen}
+                
+                />
+                  <Stack.Screen name="secondPdf" component={SecondPdfScreen}
+                
+                />
+                  <Stack.Screen name="thirdPdf" component={ThirdPdfScreen}
+                
+                />
+
+
 
                 {/* Screens */}
                 <Stack.Screen name="BookDetail" component={BookDetail} options={{ headerShown: false }} />
