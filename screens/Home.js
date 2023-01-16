@@ -29,7 +29,7 @@ const Home = ({ navigation }) => {
     const bookOtherWordsForHome = {
         id: 1,
         bookName: "Other Words For Home",
-        bookCover: images.otherWordsForHome,
+        bookCover: images.ej,
         rating: 4.5,
         language: "Eng",
         pageNo: 341,
@@ -80,20 +80,20 @@ const Home = ({ navigation }) => {
     const myBooksData = [
         {
             ...bookOtherWordsForHome,
-            completion: "75%",
-            lastRead: "3d 5h",
+            completion: "Easy",
+            lastRead: "Javascript",
 
         },
         {
             ...bookTheMetropolis,
-            completion: "23%",
-            lastRead: "10d 5h",
+            completion: "Hard",
+            lastRead: "Node-JS",
 
         },
         {
             ...bookTheTinyDragon,
-            completion: "10%",
-            lastRead: "1d 2h",
+            completion: "Hard",
+            lastRead: "Data-Structures",
 
         }
     ]
@@ -101,21 +101,21 @@ const Home = ({ navigation }) => {
     const categoriesData = [
         {
             id: 1,
-            categoryName: "Best Seller",
+            categoryName: "Frontend",
             books: [
                 bookOtherWordsForHome, bookTheMetropolis, bookTheTinyDragon
             ]
         },
         {
             id: 2,
-            categoryName: "The Latest",
+            categoryName: "Backend",
             books: [
                 bookTheMetropolis
             ]
         },
         {
             id: 3,
-            categoryName: "Coming Soon",
+            categoryName: "Web3 Course",
             books: [
                 bookTheTinyDragon
             ]
@@ -278,7 +278,7 @@ const Home = ({ navigation }) => {
                     {/* Book Info */}
                     <View style={{ marginTop: SIZES.radius, flexDirection: 'row', alignItems: 'center' }}>
                         <Image
-                            source={icons.clock_icon}
+                            source={icons.certificate_icon}
                             style={{
                                 width: 20,
                                 height: 20,
@@ -288,7 +288,7 @@ const Home = ({ navigation }) => {
                         <Text style={{ marginLeft: 5, ...FONTS.body3, color: COLORS.lightGray }}>{item.lastRead}</Text>
 
                         <Image
-                            source={icons.page_icon}
+                            source={icons.clock_icon}
                             style={{
                                 marginLeft: SIZES.radius,
                                 width: 20,
@@ -306,7 +306,7 @@ const Home = ({ navigation }) => {
             <View style={{ flex: 1 }}>
                 {/* Header */}
                 <View style={{ paddingHorizontal: SIZES.padding, flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Text style={{ ...FONTS.h2, color: COLORS.white }}>Canary Store</Text>
+                    <Text style={{ fontFamily: "Roboto-Bold", fontSize: 16, lineHeight: 30 , color: COLORS.white }}>Read Courses & Earn Certifications</Text>
 
                     <TouchableOpacity
                         onPress={() => console.log("See More")}

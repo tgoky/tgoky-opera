@@ -47,7 +47,7 @@ const Done = ({...props}) => (
     </TouchableOpacity>
 );
 
-const OnboardingScreen = ({navigation}) => {
+export const OnboardingScreen = ({navigation}) => {
     return (
         <Onboarding
         SkipButtonComponent={Skip}

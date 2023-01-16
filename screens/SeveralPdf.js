@@ -7,7 +7,7 @@ import Home from './Home';
 // import { bookTheMetropolis, book} from './Home';
 // import { bookmark_icon } from '../constants/icons';
 
-
+import { COLORS, FONTS, SIZES, icons, images } from '../constants';
 
 const Pidy = ({navigation}) => {
     
@@ -15,15 +15,24 @@ const Pidy = ({navigation}) => {
 function FirstPdfButton  ()  {
 
     return (
-        
+     
         <SafeAreaView>
+     
+  
           <TouchableOpacity onPress={() => navigation.navigate("firstPdf")}>
   <Image
     source={require('../assets/images/other_words_for_home.jpg')}
-    style={{ width: 200, height: 200, borderRadius: 20, left: 100, bottom: -70 }}
+    style={{ width: 110, height: 110, borderRadius: 20, left: 20, bottom: -70 }}
   />
+  <TouchableOpacity onPress={() => navigation.navigate("Quiz")}>
+  <View style={{ justifyContent: 'center', alignItems: 'center', padding: SIZES.base, marginRight: 8, backgroundColor: COLORS.darkGreen, height: 40, width: 150, borderRadius: 12, right: -140, }}>
+    <Text style={{ fontFamily: "Roboto-Regular", fontSize: 16, lineHeight: 22, color: COLORS.lightGreen }}>Course Assesment</Text>
+   </View>
+   </TouchableOpacity>
   </TouchableOpacity>
+
         </SafeAreaView>
+       
     );
 }
 
@@ -34,8 +43,12 @@ function SecondPdfButton  ()  {
               <TouchableOpacity onPress={() => navigation.navigate("secondPdf")}>
   <Image
     source={require('../assets/images/the_metropolist.jpg')}
-    style={{ width: 200, height: 200, borderRadius: 20, left: 100, bottom: -90 }}
-  />
+    style={{ width: 110, height: 110, borderRadius: 20, left: 20, bottom: -60 }}
+  /><TouchableOpacity>
+  <View style={{ justifyContent: 'center', alignItems: 'center', padding: SIZES.base, marginRight: 8, backgroundColor: COLORS.darkGreen, height: 40, width: 150, borderRadius: 12, right: -140, }}>
+    <Text style={{ fontFamily: "Roboto-Regular", fontSize: 16, lineHeight: 22, color: COLORS.lightGreen }}>Course Assesment</Text>
+   </View>
+   </TouchableOpacity>
   </TouchableOpacity>
              
         </View>
@@ -50,8 +63,13 @@ function ThirdPdfButton  ()  {
              <TouchableOpacity onPress={() => navigation.navigate("thirdPdf")}>
   <Image
     source={require('../assets/images/the_tiny_dragon.jpg')}
-    style={{ width: 200, height: 200, borderRadius: 20, left: 100, bottom: -110, backgroundColor: 'black' }}
+    style={{ width: 110, height: 110, borderRadius: 20, left: 20, bottom: -80, backgroundColor: 'black' }}
   />
+  <TouchableOpacity>
+  <View style={{ justifyContent: 'center', alignItems: 'center', padding: SIZES.base, marginRight: 8, backgroundColor: COLORS.darkGreen, height: 40, width: 150, borderRadius: 12, right: -140, }}>
+    <Text style={{ fontFamily: "Roboto-Regular", fontSize: 16, lineHeight: 22, color: COLORS.lightGreen }}>Course Assesment</Text>
+   </View>
+   </TouchableOpacity>
   </TouchableOpacity>
         </View>
     );

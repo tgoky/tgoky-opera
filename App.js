@@ -12,6 +12,8 @@ import { useFonts } from 'expo-font';
 import FirstPdfScreen from './pdfScreens/firstPdf';
 import SecondPdfScreen from './pdfScreens/secondPdf';
 import ThirdPdfScreen from './pdfScreens/thirdPdf';
+import Quiz from './quizfolder/app/screens/Quiz';
+
 
 
 const theme = {
@@ -63,6 +65,7 @@ const App = () => {
 <Stack.Screen name="PdfScreener" component={PdfScreen}
                 
                 />
+
                 <Stack.Screen name="firstPdf" component={FirstPdfScreen}
                 
                 />
@@ -70,6 +73,18 @@ const App = () => {
                 
                 />
                   <Stack.Screen name="thirdPdf" component={ThirdPdfScreen}
+                
+                />
+
+<Stack.Screen name="Quiz" component={Quiz} options={{
+                    headerStyle: {
+                      backgroundColor: "black",
+                    },
+                    headerTintColor: 'black',
+                    headerTitleStyle: {
+                      fontWeight: 'bold',
+                    },
+                  }}
                 
                 />
 

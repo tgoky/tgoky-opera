@@ -4,6 +4,7 @@ import {
 } from 'react-native';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Home } from "../screens/";
+import { OnboardingScreen } from '../screens/OnBoarding'
 import { icons, COLORS } from "../constants";
 
 const Tab = createBottomTabNavigator();
@@ -105,7 +106,7 @@ const Tabs = () => {
             />
             <Tab.Screen
                 name="Search"
-                component={Home}
+                component={OnboardingScreen}
                 options={{
                     headerStyle: {
                       backgroundColor: "#25282F",

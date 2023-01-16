@@ -1,5 +1,5 @@
 import React, { useEffect} from 'react';
-import { View, text} from 'react-native';
+import { View} from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import { StyleSheet, Dimensions } from 'react-native';
 import Pdf from 'react-native-pdf';
