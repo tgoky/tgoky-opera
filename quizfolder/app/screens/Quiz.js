@@ -14,6 +14,7 @@ const Quiz = () => {
     const [score, setScore] = useState(0)
     const [showNextButton, setShowNextButton] = useState(false)
     const [showScoreModal, setShowScoreModal] = useState(false)
+    
 
     const validateAnswer = (selectedOption) => {
         let correct_option = allQuestions[currentQuestionIndex]['correct_option'];
@@ -62,6 +63,8 @@ const Quiz = () => {
         }).start();
     }
 
+
+  
 
 
     const renderQuestion = () => {
@@ -194,6 +197,41 @@ const Quiz = () => {
         )
     }
 
+    const  NftShow = () => {
+return (
+        <View>
+        <TouchableOpacity
+        onPress ={restartQuiz}
+        style={{
+            backgroundColor: COLORS.accent,
+            padding: 20, width: '100%', borderRadius: 20, bottom: -7,
+        }} >
+            <Text style={{
+                textAlign: 'center', color: COLORS.white, fontSize: 20
+            }}>Claim NFT Certificate</Text>
+        </TouchableOpacity>
+        </View>
+);
+        
+    }
+
+    const  NftDont = () => {
+        return (
+                <View>
+                 <TouchableOpacity
+        style={{
+            backgroundColor: COLORS.accent,
+            padding: 20, width: '100%', borderRadius: 20, bottom: -7, display: 'none'
+        }} >
+            <Text style={{
+                textAlign: 'center', color: COLORS.white, fontSize: 20
+            }}>Oops try again later</Text>
+        </TouchableOpacity>
+                </View>
+                //i can as well, refactor this code and just make view display: none ;)
+        );
+                
+            }
 
     return (
        <View style={{
@@ -257,15 +295,22 @@ const Quiz = () => {
                            </View>
                            {/* Retry Quiz button */}
                            <TouchableOpacity
+                           
                            onPress={restartQuiz}
                            style={{
                                backgroundColor: COLORS.accent,
-                               padding: 20, width: '100%', borderRadius: 20
+                               padding: 20, width: '100%', borderRadius: 20, 
                            }}>
                                <Text style={{
-                                   textAlign: 'center', color: COLORS.white, fontSize: 20
-                               }}>Retry Quiz</Text>
+                                 textAlign: 'center', color: COLORS.white, fontSize: 20
+                               }}>Retake Assessment</Text>
                            </TouchableOpacity>
+                           <View>
+                           
+                          { score> (allQuestions.length/2) ? <NftShow/>: <NftDont/> }
+                          
+                           </View>
+                          
 
                        </View>
 
