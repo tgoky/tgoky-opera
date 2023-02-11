@@ -18,6 +18,7 @@ import JobHome from './job/screens/jobhome';
 import Profile from './job/screens/profile';
 
 import {AuthProvider} from './auth/AuthContext';
+import LoginScreen from './screens/LoginScreener';
 
 
 
@@ -86,6 +87,8 @@ const App = () => {
                        
                     <Stack.Screen name="profile" component={Profile}  
                     />
+
+<Stack.Screen name="LoginScreener" component={LoginScreen} />
 
 
 <Stack.Screen name="Quiz" component={Quiz} options={{

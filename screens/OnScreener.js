@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {StyleSheet, SafeAreaView, Image, View, StatusBar, Text, Pressable, TouchableOpacity, } from 'react-native';
-import { AuthContext } from '../auth/AuthContext';
+// import { AuthContext } from '../auth/AuthContext';
 // import { colorsDark } from 'react-native-elements/dist/config';
 import COLORS from '../constants/onboardingColor';
 //import COLORS from '../../consts/colors';
@@ -8,7 +8,7 @@ import COLORS from '../constants/onboardingColor';
 
 
 const OnScreen = ({navigation}) => {
-    const {test} = useContext(AuthContext);
+    // const {test} = useContext(AuthContext);
     return (
        
         <View style={{flex: 1, backgroundColor: "black"}}>
@@ -34,7 +34,7 @@ const OnScreen = ({navigation}) => {
              <View style={{marginTop: 10}}>
                  <Text style={style.textStyle}>Explore, Think & Grow</Text>
                  <Text style={style.textStyle}>Canaries you can build on...</Text>
-                 <Text style={style.textStyle}>{test}</Text>
+                 {/* <Text style={style.textStyle}>{test}</Text> */}
              </View>
              <View style={{flex:1,justifyContent: "flex-end",paddingBottom: 40}}>
              <View>
@@ -45,7 +45,7 @@ const OnScreen = ({navigation}) => {
      width: 360,
      borderRadius: 30,
      top: 6}}>
-               <Pressable onPress={() => navigation.navigate("OnBoarding")}>
+               <Pressable onPress={() => navigation.navigate("LoginScreener")}>
                <View style={style.btn}>
                      <Text style={{color: COLORS.dark, fontSize: 18, fontWeight: "bold",}}>Welcome to Canary App</Text>
                  </View>
