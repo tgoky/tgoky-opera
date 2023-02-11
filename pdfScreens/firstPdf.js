@@ -16,7 +16,7 @@ const FirstPdfScreen = () => {
     )
 
 
-    const source = { uri: 'https://www.africau.edu/images/default/sample.pdf', cache: true };
+    const source = { uri: 'https://eloquentjavascript.net/Eloquent_JavaScript.pdf', cache: true };
 
     
     return (

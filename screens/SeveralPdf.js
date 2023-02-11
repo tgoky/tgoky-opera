@@ -22,7 +22,7 @@ function FirstPdfButton  ()  {
   
           <TouchableOpacity onPress={() => navigation.navigate("firstPdf")}>
   <Image
-    source={require('../assets/images/other_words_for_home.jpg')}
+    source={require('../assets/images/ej.png')}
     style={{ width: 110, height: 110, borderRadius: 20, left: 20, bottom: -70 }}
   />
   <TouchableOpacity onPress={() => navigation.navigate("Quiz")}>
@@ -43,7 +43,7 @@ function SecondPdfButton  ()  {
         <View>
               <TouchableOpacity onPress={() => navigation.navigate("secondPdf")}>
   <Image
-    source={require('../assets/images/the_metropolist.jpg')}
+    source={require('../assets/images/nodejs.png')}
     style={{ width: 110, height: 110, borderRadius: 20, left: 20, bottom: 24 }}
   /><TouchableOpacity>
   <View style={{ justifyContent: 'center', alignItems: 'center', padding: SIZES.base, marginRight: 8, backgroundColor: COLORS.darkGreen, height: 40, width: 150, borderRadius: 12, right: -140, top: -100 }}>
@@ -63,7 +63,7 @@ function ThirdPdfButton  ()  {
         <View>
              <TouchableOpacity onPress={() => navigation.navigate("thirdPdf")}>
   <Image
-    source={require('../assets/images/the_tiny_dragon.jpg')}
+    source={require('../assets/images/data.png')}
     style={{ width: 110, height: 110, borderRadius: 20, left: 20, bottom: -50, backgroundColor: 'black' }}
   />
   <TouchableOpacity>

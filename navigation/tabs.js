@@ -6,6 +6,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Home } from "../screens/";
 import { OnboardingScreen } from '../screens/OnBoarding'
 import { icons, COLORS } from "../constants";
+import JobHome from "../job/screens/jobhome";
+import Profile from '../job/screens/profile';
 
 const Tab = createBottomTabNavigator();
 
@@ -50,7 +52,7 @@ const Tabs = () => {
                         case "Search":
                             return (
                                 <Image
-                                    source={icons.search_icon}
+                                    source={icons.job_icon}
                                     resizeMode="contain"
                                     style={{
                                         tintColor: tintColor,
@@ -106,7 +108,7 @@ const Tabs = () => {
             />
             <Tab.Screen
                 name="Search"
-                component={OnboardingScreen}
+                component={JobHome}
                 options={{
                     headerStyle: {
                       backgroundColor: "#25282F",

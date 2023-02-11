@@ -307,7 +307,7 @@ return (
                            </TouchableOpacity>
                            <View>
                            
-                          { score> (allQuestions.length/2) ? <NftShow/>: <NftDont/> }
+                          { score> (allQuestions.length/2) ? <NftShow/> : <NftDont/> }
                           
                            </View>
                           

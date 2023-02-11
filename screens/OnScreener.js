@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {StyleSheet, SafeAreaView, Image, View, StatusBar, Text, Pressable, TouchableOpacity, } from 'react-native';
+import { AuthContext } from '../auth/AuthContext';
 // import { colorsDark } from 'react-native-elements/dist/config';
 import COLORS from '../constants/onboardingColor';
 //import COLORS from '../../consts/colors';
 
 
+
 const OnScreen = ({navigation}) => {
+    const {test} = useContext(AuthContext);
     return (
        
         <View style={{flex: 1, backgroundColor: "black"}}>
@@ -31,6 +34,7 @@ const OnScreen = ({navigation}) => {
              <View style={{marginTop: 10}}>
                  <Text style={style.textStyle}>Explore, Think & Grow</Text>
                  <Text style={style.textStyle}>Canaries you can build on...</Text>
+                 <Text style={style.textStyle}>{test}</Text>
              </View>
              <View style={{flex:1,justifyContent: "flex-end",paddingBottom: 40}}>
              <View>

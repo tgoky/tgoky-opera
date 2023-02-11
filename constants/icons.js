@@ -14,6 +14,7 @@ export const read_icon = require("../assets/icons/read_icon.png");
 export const back_arrow_icon = require("../assets/icons/back_arrow_icon.png");
 export const more_icon = require("../assets/icons/more_icon.png");
 export const certificate_icon = require("../assets/icons/certificate_icon.png");
+export const job_icon = require("../assets/icons/jobicon.png");
 
 export default {
     card_icon,
@@ -31,5 +32,6 @@ export default {
     read_icon,
     back_arrow_icon,
     more_icon,
-    certificate_icon
+    certificate_icon,
+    job_icon
 }

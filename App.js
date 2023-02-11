@@ -14,6 +14,11 @@ import SecondPdfScreen from './pdfScreens/secondPdf';
 import ThirdPdfScreen from './pdfScreens/thirdPdf';
 import Quiz from './quizfolder/app/screens/Quiz';
 
+import JobHome from './job/screens/jobhome';
+import Profile from './job/screens/profile';
+
+import {AuthProvider} from './auth/AuthContext';
+
 
 
 const theme = {
@@ -37,6 +42,7 @@ const App = () => {
         return null;
     }
     return (
+        <AuthProvider>
         <NavigationContainer theme={theme}
         
         >
@@ -75,6 +81,12 @@ const App = () => {
                   <Stack.Screen name="thirdPdf" component={ThirdPdfScreen}
                 
                 />
+                    <Stack.Screen name="jobhome" component={JobHome}  
+                    />
+                       
+                    <Stack.Screen name="profile" component={Profile}  
+                    />
+
 
 <Stack.Screen name="Quiz" component={Quiz} options={{
                     headerStyle: {
@@ -94,6 +106,7 @@ const App = () => {
                 <Stack.Screen name="BookDetail" component={BookDetail} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
+        </AuthProvider>
     )
 }
 
