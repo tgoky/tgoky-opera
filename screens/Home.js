@@ -12,6 +12,8 @@ import {
     
 } from 'react-native';
 
+import LottieView from "lottie-react-native";
+
 import { COLORS, FONTS, SIZES, icons, images } from '../constants';
 
 const LineDivider = () => {
@@ -231,17 +233,22 @@ const Home = ({ navigation }) => {
                     <LineDivider />
 
                     {/* My Card */}
-                    <>
+                    
     <Modal animationType='slide' visible={modalVisible} transparent={true} 
     onRequestClose={() => setModalVisible(false)}>{checkoutModalContent()}</Modal>
   
   <View style= {{
       flex: 1,
       
-      bottom: -19,
+      bottom: -1,
     
   }}>
-    <View >
+    <View  style={{
+                                flex: 1,
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                justifyContent: 'center'
+                            }} >
        <TouchableOpacity style={{ 
           flex: 1 
        }}
@@ -262,16 +269,15 @@ const Home = ({ navigation }) => {
                                     width: 30,
                                     height: 30
                                 }}
+                                
                             />
-                            <Text style={{ marginLeft: SIZES.base, ...FONTS.body3, color: COLORS.white }}>My NFT</Text>
+                            <Text style={{ marginLeft: SIZES.base, ...FONTS.body3, color: COLORS.white }}> NFT</Text>
                         </View>
        </TouchableOpacity>  
    </View>
    </View>
    
-        <></>
-    
-   </>
+        
                     {/* <TouchableOpacity
                         style={{ flex: 1 }}
                         onPress={() => console.log("My Card")}
@@ -287,16 +293,19 @@ const Home = ({ navigation }) => {
         return (
             <>
             <View style={styles.modalContainer}>
-                <View style={styles.modalCheckoutContainer}>
-                    <Text style={styles.restaurantName}>NFT</Text>      
-                      <Text style={{ fontStyle: "italic", fontFamily: "Palatino", fontSize: 45, alignItems: "center", }}>Thanks for allowing Cheffie be your cuisinier !... your total bill is </Text>
-                         <Text style={{ fontSize: 83, marginTop: 53, marginLeft: 60}}>NFT</Text>
-                  
+                <View style={styles.modalCheckoutContainer}>      
+                    <LottieView style={{
+                height: 300,
+            alignSelf: 'center',
+        marginBottom: 30}}
+        source={require('../assets/images/booksnft2.json')}
+        autoPlay speed={0.5} loop={false}/>  
+        <Text style={{ fontSize: 40, ...FONTS.h4, textAlign: 'center', bottom: -20}}>COMING TO OPENSEA</Text>
                   <View
                       style={{ flexDirection: "row", justifyContent: "center"}}></View>
                <TouchableOpacity
                style={{
-                   marginTop: 55,
+                   marginTop: 45,
                    marginLeft: 34,
                    backgroundColor: "black",
                    alignItems: "center",
@@ -311,7 +320,7 @@ const Home = ({ navigation }) => {
                >
                     
            
-                   <Text style= {{ color: "white", fontSize: 20, marginRight: 40 }}>Checkout</Text>
+                   <Text style= {{ color: "white", fontSize: 20, marginRight: 40, }}>Checkout</Text>
                    <Text style={{position: "absolute", right: 20, color: "white", fontSize: 15, top: 17}}>NFT</Text>
                </TouchableOpacity>
                 </View>
@@ -588,7 +597,7 @@ const styles = StyleSheet.create({
     },
 
     modalCheckoutContainer: {
-        backgroundColor: "white",
+        backgroundColor: "black",
     padding: 16,
     height: 500,
     borderWidth: 1,
