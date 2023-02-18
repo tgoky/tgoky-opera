@@ -300,7 +300,7 @@ const Home = ({ navigation }) => {
         marginBottom: 30}}
         source={require('../assets/images/booksnft2.json')}
         autoPlay speed={0.5} loop={false}/>  
-        <Text style={{ fontSize: 40, ...FONTS.h4, textAlign: 'center', bottom: -20}}>COMING TO OPENSEA</Text>
+        <Text style={{ color:"white",  fontSize: 40, ...FONTS.h4, textAlign: 'center', bottom: -20}}>COMING TO OPENSEA</Text>
                   <View
                       style={{ flexDirection: "row", justifyContent: "center"}}></View>
                <TouchableOpacity
