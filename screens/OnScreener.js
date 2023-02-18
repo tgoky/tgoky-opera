@@ -45,7 +45,7 @@ const OnScreen = ({navigation}) => {
      width: 360,
      borderRadius: 30,
      top: 6}}>
-               <Pressable onPress={() => navigation.navigate("LoginScreener")}>
+               <Pressable onPress={() => navigation.navigate("OnBoarding")}>
                <View style={style.btn}>
                      <Text style={{color: COLORS.dark, fontSize: 18, fontWeight: "bold",}}>Welcome to Canary App</Text>
                  </View>

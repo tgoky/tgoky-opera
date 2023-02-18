@@ -3,9 +3,9 @@ import React, {createContext, useState} from 'react';
 export const AuthContext = createContext();
 
 export const AuthProvider = ({children}) => {
-    // const [isLoading, setIsLoading] = useState(true);
-    // const [userToken, setUserToken] = useState(null);
-    const [test, setTest] = useState('Test Value');
+    const [isLoading, setIsLoading] = useState(true);
+    const [userToken, setUserToken] = useState(null);
+    // const [test, setTest] = useState('Test Value');
 
     const login = () => {
         setUserToken('isfhfbbfs');
@@ -20,8 +20,10 @@ export const AuthProvider = ({children}) => {
 
 
     return (
-        <AuthContext.Provider value={{test}}>
+        <AuthContext.Provider value={{login, logout, isLoading, userToken}}>
             {children}
         </AuthContext.Provider>
     );
 }
+
+export default AuthContext;

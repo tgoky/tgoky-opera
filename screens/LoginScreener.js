@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {
   SafeAreaView,
   View,
   Text,
   TextInput,
+  Image,
   TouchableOpacity,
 } from 'react-native';
 
@@ -17,10 +18,13 @@ import TwitterSVG from '../authasset/images/misc/twitter.svg';
 
 import CustomButton from '../components/CustomButton';
 import InputField from '../components/InputField';
+// import { AuthContext } from '../auth/AuthContext';
 
 const LoginScreen = ({navigation}) => {
+
+    // const {login} = useContext(AuthContext);
   return (
-    <View style={{flex: 1, justifyContent: 'center', backgroundColor: "black"}}>
+    <SafeAreaView style={{flex: 1, justifyContent: 'center', backgroundColor: "white"}}>
       <View style={{paddingHorizontal: 25}}>
         <View style={{alignItems: 'center'}}>
           {/* <LoginSVG
@@ -28,6 +32,8 @@ const LoginScreen = ({navigation}) => {
             width={300}
             style={{transform: [{rotate: '-5deg'}]}}
           /> */}
+          <Image source={(require('../assets/images/canarylogo.png'))} 
+          style={{height:300, width:300,}} />
         </View>
 
         <Text
@@ -35,13 +41,13 @@ const LoginScreen = ({navigation}) => {
             fontFamily: 'Roboto-Bold',
             fontSize: 28,
             fontWeight: '500',
-            color: '#333',
+            color: 'purple',
             marginBottom: 30,
           }}>
           Login
         </Text>
 
-        <InputField
+        <InputField 
           label={'Email ID'}
           icon={
             <MaterialIcons
@@ -69,7 +75,7 @@ const LoginScreen = ({navigation}) => {
           fieldButtonFunction={() => {}}
         />
         
-        <CustomButton label={"Login"} onPress={() => {}} />
+        <CustomButton label={"Login"}  onPress={() => navigation.navigate("Home")} />
 
         <Text style={{textAlign: 'center', color: '#666', marginBottom: 30}}>
           Or, login with ...
@@ -77,6 +83,7 @@ const LoginScreen = ({navigation}) => {
 
         <View
           style={{
+            
             flexDirection: 'row',
             justifyContent: 'space-between',
             marginBottom: 30,
@@ -84,6 +91,7 @@ const LoginScreen = ({navigation}) => {
           <TouchableOpacity
             onPress={() => {}}
             style={{
+            backgroundColor: "white",
               borderColor: '#ddd',
               borderWidth: 2,
               borderRadius: 10,
@@ -91,28 +99,37 @@ const LoginScreen = ({navigation}) => {
               paddingVertical: 10,
             }}>
             {/* <GoogleSVG height={24} width={24} /> */}
+            <Image source={(require('../assets/images/gg.jpeg'))} 
+          style={{height:24, width:24,}} />
+
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {}}
             style={{
               borderColor: '#ddd',
+              backgroundColor: 'white',
               borderWidth: 2,
               borderRadius: 10,
               paddingHorizontal: 30,
               paddingVertical: 10,
             }}>
             {/* <FacebookSVG height={24} width={24} /> */}
+            <Image source={(require('../assets/images/gith.png'))} 
+          style={{height:24, width:24,}} />
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {}}
             style={{
               borderColor: '#ddd',
+              backgroundColor: 'white',
               borderWidth: 2,
               borderRadius: 10,
               paddingHorizontal: 30,
               paddingVertical: 10,
             }}>
             {/* <TwitterSVG height={24} width={24} /> */}
+            <Image source={(require('../assets/images/ink.jpeg'))} 
+          style={{height:24, width:24,}} />
           </TouchableOpacity>
         </View>
 
@@ -122,13 +139,13 @@ const LoginScreen = ({navigation}) => {
             justifyContent: 'center',
             marginBottom: 30,
           }}>
-          <Text>New to the app?</Text>
+          <Text style={{color: 'gray'}}>New to the app?</Text>
           <TouchableOpacity onPress={() => navigation.navigate('Register')}>
             <Text style={{color: '#AD40AF', fontWeight: '700'}}> Register</Text>
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

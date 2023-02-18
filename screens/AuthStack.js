@@ -1,55 +1,34 @@
-
 import React from 'react';
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
-import OnboardingScreen from "../tgoky-book/screens/OnBoarding";
-import Pidy from "../tgoky-book/screens/SeveralPdf"
-import OnScreen from "./screens/OnScreener";
-import PdfScreen from './screens/PdfScreener';
-import { useContext } from 'react-native';
+import OnboardingScreen from "../screens/OnBoarding";
+import Pidy from "../screens/SeveralPdf"
+import OnScreen from "../screens/OnScreener";
+import PdfScreen from '../screens/PdfScreener';
+
+
  
-import { BookDetail } from "./screens/";
-import Tabs from "./navigation/tabs";
+import { BookDetail } from "../screens/";
+import Tabs from "../navigation/tabs";
 import { useFonts } from 'expo-font';
-import FirstPdfScreen from './pdfScreens/firstPdf';
-import SecondPdfScreen from './pdfScreens/secondPdf';
-import ThirdPdfScreen from './pdfScreens/thirdPdf';
-import Quiz from './quizfolder/app/screens/Quiz';
+import FirstPdfScreen from '../pdfScreens/firstPdf';
+import SecondPdfScreen from '../pdfScreens/secondPdf';
+import ThirdPdfScreen from '../pdfScreens/thirdPdf';
+import Quiz from '../quizfolder/app/screens/Quiz';
 
-import JobHome from './job/screens/jobhome';
-import Profile from './job/screens/profile';
+import JobHome from '../job/screens/jobhome';
+import Profile from '../job/screens/profile';
 
-import {AuthProvider} from './auth/AuthContext';
-import LoginScreen from './screens/LoginScreener';
+import {AuthContext, AuthProvider} from '../auth/AuthContext';
+import LoginScreen from '../screens/LoginScreener';
 
 
-
-const theme = {
-    ...DefaultTheme,
-    colors: {
-        ...DefaultTheme.colors,
-        border: "transparent"
-    }
-}
 
 const Stack = createStackNavigator();
 
-const App = () => {
-    const [loaded] = useFonts({
-            "Roboto-Black" : require('./assets/fonts/Roboto-Black.ttf'),
-            "Roboto-Bold" : require('./assets/fonts/Roboto-Bold.ttf'),
-            "Roboto-Regular" : require('./assets/fonts/Roboto-Regular.ttf'),
-        })
-
-    if(!loaded){
-        return null;
-    }
-    return (
-        <AuthProvider>
-        <NavigationContainer theme={theme}
-        
-        >
-            <Stack.Navigator
+const AuthStack = () => {
+  return (
+           <Stack.Navigator
                 screenOptions={{
                     headerShown: false
                     
@@ -110,9 +89,7 @@ const App = () => {
                 {/* Screens */}
                 <Stack.Screen name="BookDetail" component={BookDetail} options={{ headerShown: false }} />
             </Stack.Navigator>
-        </NavigationContainer>
-        </AuthProvider>
-    )
-}
+  );
+};
 
-export default App;
+export default AuthStack;

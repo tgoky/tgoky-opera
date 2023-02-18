@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
     SafeAreaView,
     View,
@@ -6,7 +6,10 @@ import {
     TouchableOpacity,
     Image,
     ScrollView,
-    FlatList
+    FlatList,
+    Modal,
+    StyleSheet,
+    
 } from 'react-native';
 
 import { COLORS, FONTS, SIZES, icons, images } from '../constants';
@@ -20,6 +23,10 @@ const LineDivider = () => {
 }
 
 const Home = ({ navigation }) => {
+    const [modalVisible, setModalVisible ] = useState(false);
+
+    // const [modalVisible, setModalVisible ] = useState(false);
+   
 
     const profileData = {
         name: 'Username',
@@ -169,6 +176,8 @@ const Home = ({ navigation }) => {
     }
 
     function renderButtonSection() {
+     
+   
         return (
             <View style={{ flex: 1, justifyContent: 'center', padding: SIZES.padding }}>
                 <View style={{ flexDirection: 'row', height: 70, backgroundColor: COLORS.secondary, borderRadius: SIZES.radius }}>
@@ -222,11 +231,23 @@ const Home = ({ navigation }) => {
                     <LineDivider />
 
                     {/* My Card */}
-                    <TouchableOpacity
-                        style={{ flex: 1 }}
-                        onPress={() => console.log("My Card")}
-                    >
-                        <View
+                    <>
+    <Modal animationType='slide' visible={modalVisible} transparent={true} 
+    onRequestClose={() => setModalVisible(false)}>{checkoutModalContent()}</Modal>
+  
+  <View style= {{
+      flex: 1,
+      
+      bottom: -19,
+    
+  }}>
+    <View >
+       <TouchableOpacity style={{ 
+          flex: 1 
+       }}
+       onPress={() => setModalVisible(true)}
+       >
+             <View
                             style={{
                                 flex: 1,
                                 flexDirection: 'row',
@@ -244,11 +265,61 @@ const Home = ({ navigation }) => {
                             />
                             <Text style={{ marginLeft: SIZES.base, ...FONTS.body3, color: COLORS.white }}>My NFT</Text>
                         </View>
-                    </TouchableOpacity>
+       </TouchableOpacity>  
+   </View>
+   </View>
+   
+        <></>
+    
+   </>
+                    {/* <TouchableOpacity
+                        style={{ flex: 1 }}
+                        onPress={() => console.log("My Card")}
+                    >
+                       
+                    </TouchableOpacity> */}
                 </View>
             </View>
         )
     }
+
+    const checkoutModalContent = () => {
+        return (
+            <>
+            <View style={styles.modalContainer}>
+                <View style={styles.modalCheckoutContainer}>
+                    <Text style={styles.restaurantName}>NFT</Text>      
+                      <Text style={{ fontStyle: "italic", fontFamily: "Palatino", fontSize: 45, alignItems: "center", }}>Thanks for allowing Cheffie be your cuisinier !... your total bill is </Text>
+                         <Text style={{ fontSize: 83, marginTop: 53, marginLeft: 60}}>NFT</Text>
+                  
+                  <View
+                      style={{ flexDirection: "row", justifyContent: "center"}}></View>
+               <TouchableOpacity
+               style={{
+                   marginTop: 55,
+                   marginLeft: 34,
+                   backgroundColor: "black",
+                   alignItems: "center",
+                   padding: 13,
+                   borderRadius: 30,
+                   width:300,
+                   position: "relative",
+               }}
+               onPress={() => {
+                   setModalVisible(false);
+                 }}
+               >
+                    
+           
+                   <Text style= {{ color: "white", fontSize: 20, marginRight: 40 }}>Checkout</Text>
+                   <Text style={{position: "absolute", right: 20, color: "white", fontSize: 15, top: 17}}>NFT</Text>
+               </TouchableOpacity>
+                </View>
+   
+            </View>
+            </>
+        );
+               };
 
     function renderMyBookSection(myBooks) {
 
@@ -508,5 +579,20 @@ const Home = ({ navigation }) => {
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+    modalContainer: {
+      flex: 1,
+        justifyContent: "flex-end",
+        backgroundColor: "rgba(0,0,0,0.7)",
+    },
+
+    modalCheckoutContainer: {
+        backgroundColor: "white",
+    padding: 16,
+    height: 500,
+    borderWidth: 1,
+        },
+    });
 
 export default Home;
